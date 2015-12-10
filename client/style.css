@@ -1,6 +1,7 @@
 .player {
 	display: table;
 	margin: 0 auto;
+	width: 80%;
 }
 
 table {
@@ -16,7 +17,7 @@ tr:nth-child(even){
 }
 
 audio {
-
+	width: 100%;
 }
 
 .current {
