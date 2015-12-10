@@ -23,7 +23,10 @@ var SongQueue = Songs.extend({
   	}, this);
 
   	this.on('enqueue', function(item) {
-  		this.add(item);
+      //item.attributes lets us add same song
+        //multiple times
+  		// this.add(item.attributes);
+      this.add(item.attributes);
   	}, this);
 
   	this.on('erase', function(item) {
