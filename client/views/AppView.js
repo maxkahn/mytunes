@@ -14,11 +14,15 @@ var AppView = Backbone.View.extend({
   },
 
   render: function() {
+    // maybe add a class to this?
+    var $wrapperPlayer = $('<div class="player"></div>')
+    $wrapperPlayer.html([this.playerView.$el]);
+    var $wrapperQueue = $('<div></div>');
+    $wrapperQueue.html([this.libraryView.$el, this.songQueueView.$el]);
     return this.$el.html([
-      this.playerView.$el,
-      this.libraryView.$el,
-      this.songQueueView.$el
-    ]);
+      $wrapperPlayer,
+      $wrapperQueue
+    ]).addClass('app');
   }
 
 });

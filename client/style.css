@@ -1,0 +1,24 @@
+.player {
+	display: table;
+	margin: 0 auto;
+}
+
+table {
+	display: inline-flex;
+}
+
+tr {
+	width: 300px;
+}
+
+tr:nth-child(even){
+	background-color: #bababa;
+}
+
+audio {
+
+}
+
+.current {
+
+}
