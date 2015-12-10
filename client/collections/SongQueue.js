@@ -21,6 +21,10 @@ var SongQueue = Songs.extend({
   			this.playFirst();
   		}
   	}, this);
+
+  	this.on('enqueue', function(item) {
+  		this.add(item.attributes);
+  	}, this);
   },
 
   playFirst: function() {
