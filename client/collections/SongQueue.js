@@ -8,25 +8,21 @@ var SongQueue = Songs.extend({
   		}
   	}, this);
 
-  	this.on('ended', function() {
+  	this.on('ended dequeue', function() {
   		this.shift();
   		if (this.at(0) !== undefined) {
   			this.playFirst();
   		}
-  	}, this);
-
-  	this.on('dequeue', function() {
-  		this.shift();
-  		 if (this.at(0) !== undefined) {
-  			this.playFirst();
-  		}
+      else {
+        this.trigger('empty', this);
+      }
   	}, this);
 
   	this.on('enqueue', function(item) {
       //item.attributes lets us add same song
         //multiple times
   		// this.add(item.attributes);
-      this.add(item.attributes);
+      this.add(item);
   	}, this);
 
   	this.on('erase', function(item) {
