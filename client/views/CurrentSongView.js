@@ -5,7 +5,6 @@ var CurrentSongView = Backbone.View.extend({
 	template: _.template('<span class="label">Current Song: </span><span class="artist">(<%= artist %>)&nbsp;</span><span class="title"><%= title %></span>'),
 
 	initialize: function() {
-		console.log(this.model);
 		this.render();
 	},
 
